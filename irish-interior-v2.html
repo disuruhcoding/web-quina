@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irish Interior Studio — Luxury Architecture & Interior Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0A0A08;
+  --bg-soft: #111110;
+  --bg-card: #181816;
+  --bg-elevated: #1F1E1B;
+  --text: #F2EDE6;
+  --text-secondary: #B8AFA3;
+  --text-dim: #807A70;
+  --gold: #C9A96E;
+  --gold-light: #DBBF8A;
+  --gold-dim: #8B7A55;
+  --border: rgba(201,169,110,0.10);
+  --border-hover: rgba(201,169,110,0.25);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 48px);
+}
+
+/* ── LABEL & TITLES ── */
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.label::before {
+  content: '';
+  width: 28px;
+  height: 1.5px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.heading em {
+  font-style: italic;
+  color: var(--gold);
+}
+.h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+.h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); }
+.h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+.body-text {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  border-radius: 100px;
+  transition: all 0.35s var(--ease);
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg);
+  padding: 14px 32px;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201,169,110,0.25);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  padding: 12px 28px;
+  border: 1.5px solid var(--gold-dim);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  background: rgba(201,169,110,0.06);
+}
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* ── TOP BANNER ── */
+.banner {
+  background: var(--gold);
+  color: var(--bg);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ── NAVBAR ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,8,0.8);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.logo b { color: var(--text); font-weight: 400; }
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+.nav-menu a {
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+.nav-menu a:hover { color: var(--gold); }
+.nav-cta {
+  color: var(--bg) !important;
+  background: var(--gold);
+  padding: 9px 22px;
+  border-radius: 100px;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  transition: background 0.3s, transform 0.3s !important;
+}
+.nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* Hamburger */
+.burger { display: none; cursor: pointer; padding: 6px; }
+.burger svg { width: 24px; height: 24px; stroke: var(--text); fill: none; stroke-width: 2; stroke-linecap: round; }
+
+/* Mobile overlay */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,8,0.96);
+  backdrop-filter: blur(20px);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+.mobile-nav.open { opacity: 1; pointer-events: auto; }
+.mobile-nav a {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--text);
+  transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mobile-close svg { width: 24px; height: 24px; stroke: var(--text); fill: none; stroke-width: 2; stroke-linecap: round; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: clamp(80px, 12vw, 140px) 0 clamp(60px, 10vw, 120px);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+.hero-text { max-width: 720px; }
+.hero .heading { margin-bottom: 24px; }
+.hero .body-text {
+  font-size: 16px;
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 40px;
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+  width: fit-content;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* ── SECTION SPACING ── */
+.sec { padding: clamp(64px, 10vw, 110px) 0; }
+
+/* ── PHILOSOPHY ── */
+.philosophy { background: var(--bg-soft); }
+.phil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.phil-visual {
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.phil-visual::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(201,169,110,0.06);
+  border-radius: 12px;
+  pointer-events: none;
+}
+.phil-visual svg { width: 100px; height: 100px; opacity: 0.08; }
+.phil-text .heading { margin-bottom: 20px; }
+.phil-text .body-text { margin-bottom: 16px; }
+.phil-quote {
+  border-left: 2px solid var(--gold);
+  padding: 20px 0 20px 24px;
+  margin: 28px 0;
+}
+.phil-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(16px, 2vw, 19px);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── SERVICES ── */
+.services { background: var(--bg); }
+.services-top {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto clamp(36px, 5vw, 56px);
+}
+.services-top .body-text { margin-top: 12px; }
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.svc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(28px, 3vw, 40px);
+  transition: border-color 0.4s, transform 0.4s var(--ease), box-shadow 0.4s;
+  position: relative;
+}
+.svc-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.svc-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(201,169,110,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.svc-icon svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.svc-card .heading { margin-bottom: 10px; }
+.svc-card .body-text { font-size: 14px; margin-bottom: 20px; }
+.svc-link {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s;
+}
+.svc-card:hover .svc-link { gap: 12px; }
+
+/* ── PORTFOLIO ── */
+.portfolio { background: var(--bg-soft); }
+.port-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+.port-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.port-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color 0.4s, transform 0.4s var(--ease);
+  cursor: pointer;
+}
+.port-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+.port-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.port-bg svg { width: 40px; height: 40px; opacity: 0.08; }
+.port-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: clamp(16px, 3vw, 24px);
+  background: linear-gradient(to top, rgba(10,10,8,0.92) 0%, rgba(10,10,8,0.5) 70%, transparent 100%);
+}
+.port-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.port-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(14px, 1.6vw, 17px);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ── TEAM ── */
+.team { background: var(--bg); }
+.team-top {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto clamp(32px, 5vw, 56px);
+}
+.team-top .body-text { margin-top: 12px; }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 44px);
+  transition: border-color 0.4s;
+}
+.team-card:hover { border-color: var(--border-hover); }
+.team-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--bg);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.team-card .heading { margin-bottom: 4px; }
+.team-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.team-card .body-text { font-size: 14px; }
+
+/* ── ARTICLES ── */
+.articles { background: var(--bg-soft); }
+.art-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+  flex-wrap: wrap;
+}
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.art-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.4s, transform 0.4s var(--ease);
+}
+.art-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+.art-thumb {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.art-thumb svg { width: 32px; height: 32px; opacity: 0.08; }
+.art-body { padding: clamp(18px, 2.5vw, 24px); }
+.art-date {
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.art-card .heading { margin-bottom: 10px; line-height: 1.35; }
+.art-card .body-text { font-size: 13px; }
+
+/* ── CTA ── */
+.cta-sec {
+  padding: clamp(72px, 10vw, 120px) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+.cta-sec::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.cta-sec .label { justify-content: center; }
+.cta-sec .label::before { display: none; }
+.cta-sec .heading { max-width: 600px; margin: 0 auto 16px; }
+.cta-desc {
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 36px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ── SERVICE AREAS ── */
+.areas {
+  background: var(--bg-card);
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.areas-inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.area-pill {
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s;
+}
+.area-pill:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 56px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  margin-bottom: 40px;
+}
+.footer-brand .logo { display: inline-block; margin-bottom: 14px; }
+.footer-brand .body-text { font-size: 13px; max-width: 320px; }
+.footer-contact h4 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.footer-wa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.footer-wa svg { width: 22px; height: 22px; fill: #25D366; flex-shrink: 0; }
+.socials { display: flex; gap: 10px; }
+.socials a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.socials a:hover { border-color: var(--gold-dim); background: rgba(201,169,110,0.06); }
+.socials svg { width: 15px; height: 15px; fill: var(--text-dim); transition: fill 0.3s; }
+.socials a:hover svg { fill: var(--gold); }
+.footer-bar {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-bar span { font-size: 12px; color: var(--text-dim); }
+
+/* ── FLOATING WA ── */
+.wa-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  z-index: 99;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.wa-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+.wa-fab svg { width: 26px; height: 26px; fill: #fff; }
+
+/* ── REVEAL ── */
+.rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+.rv.show { opacity: 1; transform: none; }
+
+/* ══════════════ RESPONSIVE ══════════════ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .port-grid { grid-template-columns: repeat(2, 1fr); }
+  .art-grid { grid-template-columns: repeat(2, 1fr); }
+  .phil-grid { gap: 40px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .burger { display: block; }
+
+  .hero { padding: 60px 0 50px; }
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 28px;
+  }
+  .stat-num { font-size: 26px; }
+  .stat-label { font-size: 11px; }
+
+  .sec { padding: 56px 0; }
+
+  .phil-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .phil-visual {
+    aspect-ratio: 16/10;
+    max-height: 280px;
+  }
+
+  .svc-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .svc-card { padding: 24px; }
+
+  .port-top { flex-direction: column; align-items: flex-start; }
+  .port-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .port-card { aspect-ratio: 1/1; }
+  .port-info { padding: 14px; }
+  .port-name { font-size: 13px; }
+  .port-tag { font-size: 9px; letter-spacing: 1px; margin-bottom: 2px; }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .team-card { padding: 24px; }
+  .team-avatar { width: 56px; height: 56px; font-size: 18px; margin-bottom: 16px; }
+
+  .art-top { flex-direction: column; align-items: flex-start; }
+  .art-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .areas-inner { justify-content: flex-start; }
+  .area-pill { font-size: 11px; padding: 6px 14px; }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .port-grid { grid-template-columns: 1fr; }
+  .port-card { aspect-ratio: 4/3; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Banner -->
+<div class="banner">Studio: Jakarta & Tangerang &bull; Free Initial 3D Layout Consultation</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo">Irish <b>Interior</b></a>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#articles">Activity</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://wa.me/6281213755254" class="nav-cta">Free Consultation</a></li>
+    </ul>
+    <div class="burger" onclick="document.getElementById('mob').classList.add('open')">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mob">
+  <div class="mobile-close" onclick="document.getElementById('mob').classList.remove('open')">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </div>
+  <a href="#home" onclick="document.getElementById('mob').classList.remove('open')">Home</a>
+  <a href="#services" onclick="document.getElementById('mob').classList.remove('open')">Services</a>
+  <a href="#portfolio" onclick="document.getElementById('mob').classList.remove('open')">Portofolio</a>
+  <a href="#articles" onclick="document.getElementById('mob').classList.remove('open')">Activity</a>
+  <a href="#contact" onclick="document.getElementById('mob').classList.remove('open')">Contact</a>
+  <a href="https://wa.me/6281213755254" class="btn btn-primary" style="margin-top:12px">Free Consultation</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="label">Luxury Interior Studio</div>
+        <h1 class="heading h1">Elevating Spaces Through <em>Luxury &amp; Timeless</em> Architecture Interior Design.</h1>
+        <p class="body-text">Irish Interior adalah konsultan desain dan kontraktor terkemuka di Jakarta dan Tangerang, mengubah hunian dan ruang komersial menjadi proyek fungsional bernilai tinggi dengan sentuhan modern warm luxury.</p>
+        <a href="https://wa.me/6281213755254" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.802-6.315-2.148l-.44-.34-3.097 1.038 1.038-3.097-.34-.44A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Konsultasi Via WhatsApp
+        </a>
+        <div class="hero-stats">
+          <div><div class="stat-num">150+</div><div class="stat-label">Projects Completed</div></div>
+          <div><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+          <div><div class="stat-num">50+</div><div class="stat-label">Happy Clients</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section class="philosophy sec" id="philosophy">
+  <div class="wrap">
+    <div class="phil-grid">
+      <div class="phil-visual rv">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.4" color="#C9A96E">
+          <rect x="10" y="10" width="80" height="80" rx="2"/><line x1="10" y1="50" x2="90" y2="50"/>
+          <line x1="50" y1="10" x2="50" y2="90"/><circle cx="50" cy="50" r="25"/>
+          <line x1="10" y1="10" x2="90" y2="90"/><line x1="90" y1="10" x2="10" y2="90"/>
+        </svg>
+      </div>
+      <div class="phil-text rv">
+        <div class="label">Our Philosophy</div>
+        <h2 class="heading h2">A Combination of Architectural Precision and Modern <em>Interior Aesthetics.</em></h2>
+        <p class="body-text">Setiap proyek kami dimulai dari visi yang harmonis antara detail, material, keahlian, dan eksekusi. Luxury bukan tentang kemewahan semata, melainkan tentang proporsi, kualitas, dan kenyamanan.</p>
+        <div class="phil-quote">
+          <p>Studio desain dan workshop manufaktur terintegrasi kami menjaga integritas desain dari konsep hingga penyelesaian.</p>
+        </div>
+        <p class="body-text">Kami percaya bahwa ruang yang dirancang dengan baik adalah perpaduan sempurna antara fungsi dan estetika &mdash; menciptakan pengalaman yang tak lekang oleh waktu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services sec" id="services">
+  <div class="wrap">
+    <div class="services-top rv">
+      <div class="label" style="justify-content:center;width:100%">Our Services</div>
+      <h2 class="heading h2">Layanan <em>Desain Premium</em> untuk Setiap Kebutuhan</h2>
+      <p class="body-text">Dari hunian mewah hingga ruang komersial, kami menghadirkan solusi desain yang menyeluruh dan berkelas.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card rv">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="heading h3">Residential Design</h3>
+        <p class="body-text">Rumah mewah, villa, dan apartemen yang dirancang dengan fokus pada kenyamanan dan ergonomi ruang.</p>
+        <span class="svc-link">More Details &rarr;</span>
+      </div>
+      <div class="svc-card rv">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3 class="heading h3">Commercial &amp; Retail</h3>
+        <p class="body-text">Kafe, restoran, showroom, dan butik yang didesain berdasarkan customer experience.</p>
+        <span class="svc-link">More Details &rarr;</span>
+      </div>
+      <div class="svc-card rv">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3 class="heading h3">Office Workspaces</h3>
+        <p class="body-text">Kantor korporat dan coworking space yang mencerminkan identitas brand secara elegan.</p>
+        <span class="svc-link">More Details &rarr;</span>
+      </div>
+      <div class="svc-card rv">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 7h-3V4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v3H4a1 1 0 0 0-1 1v5h2v7h2v-7h10v7h2v-7h2V8a1 1 0 0 0-1-1z"/></svg></div>
+        <h3 class="heading h3">Custom Furniture</h3>
+        <p class="body-text">Kitchen set, lemari, TV backdrop, dan loose furniture diproduksi langsung di workshop kami.</p>
+        <span class="svc-link">More Details &rarr;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section class="portfolio sec" id="portfolio">
+  <div class="wrap">
+    <div class="port-top rv">
+      <div>
+        <div class="label">Our Portfolio</div>
+        <h2 class="heading h2">Proyek <em>Unggulan</em> Kami</h2>
+      </div>
+      <a href="#" class="btn btn-outline">Explore Portfolio &rarr;</a>
+    </div>
+    <div class="port-grid">
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Residential</div><div class="port-name">PIK 1 Cluster Gold Coast</div></div>
+      </div>
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Office</div><div class="port-name">SiCepat Head Office, Jakarta</div></div>
+      </div>
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Commercial</div><div class="port-name">Bandara Soekarno-Hatta Terminal 3</div></div>
+      </div>
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Commercial</div><div class="port-name">I Gusti Ngurah Rai Airport, Bali</div></div>
+      </div>
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Residential &mdash; Classic</div><div class="port-name">Cluster Demansion, Alam Sutera</div></div>
+      </div>
+      <div class="port-card rv">
+        <div class="port-bg"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <div class="port-info"><div class="port-tag">Commercial</div><div class="port-name">Beauty District Noble House, Jaksel</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="team sec" id="team">
+  <div class="wrap">
+    <div class="team-top rv">
+      <div class="label" style="justify-content:center;width:100%">Meet The People</div>
+      <h2 class="heading h2">Tim di Balik <em>Setiap Karya</em></h2>
+      <p class="body-text">Dipimpin oleh profesional berpengalaman yang menggabungkan visi kreatif dengan eksekusi presisi.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card rv">
+        <div class="team-avatar">RS</div>
+        <h3 class="heading h3">Rica Septiyana</h3>
+        <div class="team-role">COO & Design Principal</div>
+        <p class="body-text">Pendiri dan pemimpin kreatif studio. Fokus pada presisi, keahlian, dan desain yang bertahan lama melampaui tren — mengutamakan restraint dan craftsmanship dalam setiap detail.</p>
+      </div>
+      <div class="team-card rv">
+        <div class="team-avatar">IA</div>
+        <h3 class="heading h3">Ishak Alfa</h3>
+        <div class="team-role">Chief Executive Officer</div>
+        <p class="body-text">Memimpin pertumbuhan perusahaan menuju brand arsitektur dan interior luxury yang diakui. Mengelola strategi bisnis dan memastikan standar kualitas tertinggi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+<section class="articles sec" id="articles">
+  <div class="wrap">
+    <div class="art-top rv">
+      <div>
+        <div class="label">Studio Activities</div>
+        <h2 class="heading h2">Artikel &amp; <em>Insight</em> Terbaru</h2>
+      </div>
+      <a href="#" class="btn btn-outline">View All Articles &rarr;</a>
+    </div>
+    <div class="art-grid">
+      <div class="art-card rv">
+        <div class="art-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="art-body">
+          <div class="art-date">13 September 2026</div>
+          <h3 class="heading h3">Tren Desain Warm Luxury Minimalist 2026</h3>
+          <p class="body-text">Eksplorasi gaya desain interior yang menggabungkan kehangatan material alami dengan estetika minimalis modern.</p>
+        </div>
+      </div>
+      <div class="art-card rv">
+        <div class="art-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="art-body">
+          <div class="art-date">13 September 2026</div>
+          <h3 class="heading h3">Progress Site Visit: Proyek Rumah BSD</h3>
+          <p class="body-text">Dokumentasi kunjungan lapangan untuk memantau perkembangan pembangunan proyek hunian di BSD City.</p>
+        </div>
+      </div>
+      <div class="art-card rv">
+        <div class="art-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="0.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="art-body">
+          <div class="art-date">13 September 2026</div>
+          <h3 class="heading h3">Tips Memilih Jasa Desain Interior Terpercaya</h3>
+          <p class="body-text">Panduan lengkap untuk memilih partner desain interior yang tepat di Jakarta dan Tangerang.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <div class="wrap rv">
+    <div class="label">Get In Touch</div>
+    <h2 class="heading h2">Where Design Meets <em>Precision.</em></h2>
+    <p class="cta-desc">Setiap ruang memiliki cerita. Izinkan kami membantu Anda mewujudkan ruang impian dengan desain yang presisi dan tak lekang oleh waktu.</p>
+    <a href="https://wa.me/6281213755254" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.802-6.315-2.148l-.44-.34-3.097 1.038 1.038-3.097-.34-.44A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Konsultasi WA Fast Response
+    </a>
+  </div>
+</section>
+
+<!-- Areas -->
+<section class="areas">
+  <div class="wrap">
+    <div class="areas-inner rv">
+      <span class="area-pill">Jaksel — Senopati, Kemang, Pondok Indah</span>
+      <span class="area-pill">Tangerang & BSD City</span>
+      <span class="area-pill">Jakarta Barat & PIK</span>
+      <span class="area-pill">Gading Serpong & Alam Sutera</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">Irish <b>Interior</b></a>
+        <p class="body-text">Konsultan desain interior dan kontraktor terkemuka di Jakarta & Tangerang. Mewujudkan ruang bernilai tinggi dengan sentuhan modern warm luxury.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Konsultasi WA Fast Response</h4>
+        <a href="https://wa.me/6281213755254" class="footer-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.802-6.315-2.148l-.44-.34-3.097 1.038 1.038-3.097-.34-.44A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          0812-1375-5254
+        </a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>&copy; 2026 Irish Interior Studio. All rights reserved.</span>
+      <span>Design Interior Indonesia | Jakarta | Tangerang</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WA -->
+<a href="https://wa.me/6281213755254" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.802-6.315-2.148l-.44-.34-3.097 1.038 1.038-3.097-.34-.44A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
